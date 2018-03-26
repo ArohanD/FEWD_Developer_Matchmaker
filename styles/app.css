@@ -172,12 +172,14 @@ else there is a gap between the top and yellow line.*/
 
 .cards {
 	margin:auto;
-	max-width: 80%;
+/*	max-width: 80%;*/
 	padding: 2% 0;
+	align-items: center;
 }
 
 .row {
 	display: flex;
+	justify-content: center;
 }
 
 .card {
@@ -221,4 +223,72 @@ else there is a gap between the top and yellow line.*/
 	margin-right: 3px;
 }
 
+@media (max-width: 550px) {
+	.global_header {
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 
+	.nav {
+		box-sizing: border-box;
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		font-weight: normal;
+		margin: 0 10px;
+		padding: 1% 10px;
+		font-size: .95em;
+		border-right: 1px solid yellow;
+		height: 55px;
+	}
+
+	.nav_bold {
+		box-sizing: border-box;
+		word-break: break-all;
+	}
+
+	.splash {
+		padding: 2%;
+	}
+
+	.splash_textbox {
+		width: 100%;
+		justify-content: flex-start;
+		background-color: rgba(255,255,255,0.75);
+	}
+
+	.homeNav_container {
+		flex-direction: column;
+	}
+
+	.homeNav_block {
+		box-shadow: 0 0 1px 0 rgba(0,0,0,.45);
+		margin: 0 0 10px 0;
+	}
+
+	.homeNav_block:last-child {
+		box-shadow: 0 0 1px 0 rgba(0,0,0,.45);
+		margin: 0 0 10px 0;
+	}
+
+	.row {
+		flex-direction: column;
+	}
+
+	.nav_links {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	.nav.selected {
+		text-decoration: none;
+		display: block;
+		box-sizing: border-box;
+		background-color: rgba(0,0,0,0);
+		padding: 0 10px;
+		color: yellow;
+	}
+}
